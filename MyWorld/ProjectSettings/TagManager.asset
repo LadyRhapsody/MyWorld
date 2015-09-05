@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Chair
+  - Chairs
+  - Timetext
+  - Moneytext
+  - Itemtext
+  - Counter
+  - Barinventory
+  - Kitchen
+  - Npc
+  - New Tag
   layers:
   - Default
   - TransparentFX
@@ -13,9 +23,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - Front
+  - Blocking
   - 
   - 
   - 
@@ -40,4 +50,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3641427467
+    locked: 0
+  - name: Front
+    uniqueID: 523563073
+    locked: 0
+  - name: Up
+    uniqueID: 1772279785
     locked: 0
