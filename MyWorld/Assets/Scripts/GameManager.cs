@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 
     private void Init()
     {
-        timeText = GameObject.FindWithTag("Timetext").GetComponent<Text>(); ;
+        timeText = GameObject.FindWithTag("Timetext").GetComponent<Text>(); 
 
         if (minute == 0)
         {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class MainBar : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class MainBar : MonoBehaviour
     private Transform NpcHolder;
     private bool open = true;
     private int barLevel;
+    public Inventory inventory;
 
 
     public void AddNpcToList(NPC script)
@@ -52,6 +54,7 @@ public class MainBar : MonoBehaviour
         chairs = GetComponentsInChildren<Chair>();
         Debug.Log(chairs.Length);
         barLevel = 1;
+        
 
         InvokeRepeating("NewCustomer", 10, waitSeconds / barLevel);
 

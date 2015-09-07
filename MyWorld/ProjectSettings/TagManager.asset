@@ -13,7 +13,8 @@ TagManager:
   - Barinventory
   - Kitchen
   - Npc
-  - New Tag
+  - HUB
+  - InvText
   layers:
   - Default
   - TransparentFX
