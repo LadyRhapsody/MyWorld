@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309863836b0863647b3c781de97104c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faderObject: {fileID: 110472, guid: 8d01fd7a20465504c909f61d976f60a5, type: 2}
   slots: 20
   slotSize: 50
   slotPaddingLeft: 5
@@ -154,7 +155,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: faderObject
+      value: 
+      objectReference: {fileID: 110472, guid: 8d01fd7a20465504c909f61d976f60a5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100602}
