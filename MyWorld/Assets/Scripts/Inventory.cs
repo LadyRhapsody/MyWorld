@@ -10,7 +10,6 @@ public class Inventory : MonoBehaviour
     private Text text;
     private RectTransform rect;
     private List<GameObject> inventory;
-    public GameObject faderObject;
 
     public int slots;
     public int slotSize;
@@ -27,7 +26,7 @@ public class Inventory : MonoBehaviour
     void Awake()
     {
         text = GetComponentInChildren<Text>();
-        fader = faderObject.GetComponent<ScreenFader>();
+        fader = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
     }
 
     public void StartInventory(string typ)
