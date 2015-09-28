@@ -15,6 +15,7 @@ TagManager:
   - Npc
   - HUB
   - InvText
+  - Fader
   layers:
   - Default
   - TransparentFX
