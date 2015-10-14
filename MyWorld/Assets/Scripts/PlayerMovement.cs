@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D rbody;
 	private Animator anim;
+    private bool canWalk;
 
 
 	// Use this for initialization
@@ -12,11 +13,13 @@ public class PlayerMovement : MonoBehaviour {
 	
 		rbody = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
-	}
+        canWalk = true;
+}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+        if (canWalk) { 
 		Vector2 move_vector = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 		if (move_vector != Vector2.zero) {
@@ -28,5 +31,16 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		rbody.MovePosition (rbody.position + move_vector * Time.deltaTime* 1.5f);
-	}
+        }
+    }
+
+    public void StopWalk()
+    {
+        canWalk = false;
+    }
+
+    public void StartWalk()
+    {
+        canWalk = true;
+    }
 }

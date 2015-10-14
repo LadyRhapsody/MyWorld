@@ -32,15 +32,13 @@ public class Fridge : MonoBehaviour
         itemText.text = "F: Kühlschrank öffnen";
         inFrontOf = true;
 
-
-    }
+       }
 
     void OnTriggerExit2D(Collider2D other)
     {
         itemText.enabled = false;
         itemImage.enabled = false;
         inFrontOf = false;
-
     }
 
     void Update()
@@ -51,12 +49,28 @@ public class Fridge : MonoBehaviour
 
 
         }
+        if (Input.GetKeyDown(KeyCode.Escape) && inFrontOf)
+        {
+            endInventory();
+
+
+        }
+    }
+
+    private void endInventory()
+    {
+        var pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        pm.StartWalk();
+        acutalInventory.enabled = false;
     }
 
     private void showInventory()
     {
+        var pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        pm.StopWalk();
         if (acutalInventory == null)
         {
+        
             parent = GameObject.FindGameObjectWithTag("HUB").transform;
 
             acutalInventory = Instantiate(inventory) as Inventory;
@@ -67,6 +81,10 @@ public class Fridge : MonoBehaviour
             acutalInventory.StartInventory("Barinventory");
 
             rect.localPosition = new Vector3(-270, 0);
+        }
+        else
+        {
+            acutalInventory.enabled = true;
         }
     }
 }

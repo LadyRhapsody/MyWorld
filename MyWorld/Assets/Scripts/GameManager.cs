@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 
     private Text timeText;
 
-    
+    public PlayerMovement pm;
 
     
 
